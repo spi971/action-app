@@ -6,7 +6,7 @@ const Modal = () => {
 
   return (
     <div>
-      <Button style='btn-primary' size="btn-md" text='Add Board' onClick={openModal} />
+      <Button style='btn-primary' size="btn-md" text='Create new Board' onClick={openModal} />
       <dialog id='my_modal_1' className='modal'>
         <div className='modal-box flex flex-col items-center justify-center'>
           <h3 className='font-bold text-lg'>Create new Board</h3>

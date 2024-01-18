@@ -33,11 +33,11 @@ const App = () => {
     <>
       <div className='flex items-center justify-center flex-col gap-2'>
         <article className=' flex flex-col items-center justify-center prose'>
-          <h1 className='text-primary'>Actions!!</h1>
+          <h1 className='text-primary text-6xl my-6'>Actions!!</h1>
           <Modal />
         </article>
       </div>
-      <div className='flex flex-wrap justify-start gap-4 mt-8 mx-32'>
+      <div className='flex flex-wrap justify-start gap-4 my-12 mx-32'>
         {todos.map((todo) => {
           return (
             <div key={todo.id}>

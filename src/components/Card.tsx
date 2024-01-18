@@ -14,7 +14,7 @@ const Card = ({todo}) => {
         <p className="flex justify-center">{todo.description}</p>
         <div className='card-actions justify-center'>
             <Button style='btn-primary' size="btn-sm" text='Open' />
-            <Button style='btn-warning' size="btn-sm" text='Archive' />
+            <Button style='btn-outline btn-warning' size="btn-sm" text='Archive' />
             <Button style='btn-error' size="btn-sm" text='Delete' />
         </div>
       </div>
