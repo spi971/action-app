@@ -1,6 +1,6 @@
 import React from "react";
-import HomeBoardListProps from "../interface/HomeBoardListProps";
-import Card from "./Card";
+import HomeBoardListProps from "../../interface/HomeBoardListProps";
+import Card from "../Card";
 
 const HomeBoardList: React.FC<HomeBoardListProps> = ({ todos }) => {
   return (

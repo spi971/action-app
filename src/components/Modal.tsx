@@ -1,6 +1,6 @@
+import ModalProps from "../interface/ModalProps";
 import Button from "./Button";
 import Dialog from "./Dialog";
-import ModalProps from "../interface/ModalProps";
 
 const Modal: React.FC<ModalProps> = ({
   id,
@@ -8,6 +8,7 @@ const Modal: React.FC<ModalProps> = ({
   modalTitle,
   btnActions,
 }) => {
+  // @ts-ignore
   const openModal = () => document.getElementById(id).showModal();
 
   return (

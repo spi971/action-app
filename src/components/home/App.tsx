@@ -1,7 +1,7 @@
 import "./App.css";
 
-import HomeHeader from "./components/HomeHeader";
-import HomeBoardList from "./components/HomeBoardList";
+import HomeBoardList from "./HomeBoardList";
+import HomeHeader from "./HomeHeader";
 
 const App = () => {
   const todos = [
