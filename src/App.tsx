@@ -1,11 +1,16 @@
-import Navbar from "./components/navbar/Navbar";
-import MENU_ITEMS from "./components/navbar/menuItems";
+import "./App.css";
+import Modal from "./components/Modal";
 
-function App() {
+const App = () => {
+
   return (
     <>
-      <Navbar menuItems={MENU_ITEMS} />
-      <h1>Actions App</h1>
+      <div className='flex items-center justify-center'>
+        <article className='flex flex-col items-center  justify-center prose'>
+          <h1>Actions</h1>
+          <Modal/>
+        </article>
+      </div>
     </>
   );
 }
