@@ -1,6 +1,7 @@
 import "./App.css";
-import Card from "./components/Card";
-import Modal from "./components/Modal";
+
+import HomeHeader from "./components/HomeHeader";
+import HomeBoardList from "./components/HomeBoardList";
 
 const App = () => {
   const todos = [
@@ -29,35 +30,26 @@ const App = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque tempora quis, quidem voluptas maxime explicabo tempore nostrum ipsum non nisi odio animi eum voluptates harum debitis, sequi minima deserunt.,",
     },
   ];
+
   const modalProps = {
+    id: "create_board_modal",
     btnTitle: "Create new Board",
     modalTitle: "Create new Board",
     btnActions: {
-      left: "Cancel",
-      right: "Create",
+      left: {
+        text: "Cancel",
+      },
+      right: {
+        text: "Create",
+        onClick: () => console.log("hello"),
+      },
     },
   };
+
   return (
     <>
-      <div className='flex items-center justify-center flex-col gap-2'>
-        <article className=' flex flex-col items-center justify-center prose'>
-          <h1 className='text-primary text-6xl my-6'>Actions!!</h1>
-          <Modal
-            btnTitle={modalProps.btnTitle}
-            modalTitle={modalProps.modalTitle}
-            btnActions={modalProps.btnActions}
-          />
-        </article>
-      </div>
-      <div className='flex flex-wrap justify-start gap-4 my-12 mx-32'>
-        {todos.map((todo) => {
-          return (
-            <div key={todo.id}>
-              <Card todo={todo} />
-            </div>
-          );
-        })}
-      </div>
+      <HomeHeader modalProps={modalProps} />
+      <HomeBoardList todos={todos} />
     </>
   );
 };

@@ -1,13 +1,8 @@
-interface BtnProps {
-  style: string;
-  text: string;
-  size: string;
-  onClick?: () => void;
-}
+import BtnProps from "../interface/BtnProps";
 
-const Button: React.FC<BtnProps> = ({ style, text, size, onClick }) => {
+const Button: React.FC<BtnProps> = ({ type, style, text, size, onClick }) => {
   return (
-    <button type="button" className={`btn ${style} ${size}`} onClick={onClick}>
+    <button type={type} className={`btn ${style} ${size}`} onClick={onClick}>
       {text}
     </button>
   );

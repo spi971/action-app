@@ -1,8 +1,5 @@
+import CardProps from "../interface/CardProps";
 import Button from "./Button";
-
-interface CardProps {
-  todo: { id: number; title: string; image: string; description: string };
-}
 
 const Card: React.FC<CardProps> = ({ todo }) => {
   return (
@@ -14,13 +11,14 @@ const Card: React.FC<CardProps> = ({ todo }) => {
         <h2 className='justify-center card-title'>{todo.title}</h2>
         <p className='flex justify-center'>{todo.description}</p>
         <div className='card-actions justify-center'>
-          <Button style='btn-primary' size='btn-sm' text='Open' />
+          <Button type='button' style='btn-primary' size='btn-sm' text='Open' />
           <Button
+            type='button'
             style='btn-outline btn-warning'
             size='btn-sm'
             text='Archive'
           />
-          <Button style='btn-error' size='btn-sm' text='Delete' />
+          <Button type='button' style='btn-error' size='btn-sm' text='Delete' />
         </div>
       </div>
     </div>
