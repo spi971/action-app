@@ -1,5 +1,16 @@
-const Button = ({ style, text, size, onClick }) => {
-  return <button className={`btn ${style} ${size}`} onClick={onClick}>{text}</button>;
+interface BtnProps {
+  style: string;
+  text: string;
+  size: string;
+  onClick?: () => void;
+}
+
+const Button: React.FC<BtnProps> = ({ style, text, size, onClick }) => {
+  return (
+    <button type="button" className={`btn ${style} ${size}`} onClick={onClick}>
+      {text}
+    </button>
+  );
 };
 
 export default Button;

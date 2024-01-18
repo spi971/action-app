@@ -29,12 +29,24 @@ const App = () => {
         "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate eaque tempora quis, quidem voluptas maxime explicabo tempore nostrum ipsum non nisi odio animi eum voluptates harum debitis, sequi minima deserunt.,",
     },
   ];
+  const modalProps = {
+    btnTitle: "Create new Board",
+    modalTitle: "Create new Board",
+    btnActions: {
+      left: "Cancel",
+      right: "Create",
+    },
+  };
   return (
     <>
       <div className='flex items-center justify-center flex-col gap-2'>
         <article className=' flex flex-col items-center justify-center prose'>
           <h1 className='text-primary text-6xl my-6'>Actions!!</h1>
-          <Modal />
+          <Modal
+            btnTitle={modalProps.btnTitle}
+            modalTitle={modalProps.modalTitle}
+            btnActions={modalProps.btnActions}
+          />
         </article>
       </div>
       <div className='flex flex-wrap justify-start gap-4 my-12 mx-32'>
